@@ -262,7 +262,7 @@ a:hover { text-decoration: underline; text-decoration-color: rgba(132,204,22,0.5
 .avatar {
   width: min(360px, 90%);
   aspect-ratio: 1 / 1;
-  border-radius: 999px;
+  border-radius: var(--radius);
   object-fit: cover;
   object-position: 50% 30%;
   border: 1px solid rgba(132, 204, 22, 0.35);
