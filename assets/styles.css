@@ -271,7 +271,7 @@ a:hover { text-decoration: underline; text-decoration-color: rgba(132,204,22,0.5
 }
 
 .card {
-  border: 1px solid var(--border);
+  border: 1px solid var(10px);
   background: var(--panel);
   border-radius: var(--radius);
   padding: 16px 16px;
