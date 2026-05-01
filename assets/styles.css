@@ -239,10 +239,11 @@ a:hover { text-decoration: underline; text-decoration-color: rgba(132,204,22,0.5
   gap: 14px;
 }
 
+/* About: keep cards about half-width and put photo in remaining space */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 0.85fr;
-  gap: 14px;
+  grid-template-columns: minmax(360px, 1fr) minmax(280px, 1fr);
+  gap: 16px;
   align-items: start;
 }
 
@@ -250,20 +251,20 @@ a:hover { text-decoration: underline; text-decoration-color: rgba(132,204,22,0.5
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
+  max-width: 520px; /* keeps the stack around ~half of typical container */
 }
 
 .about-photo {
   display: flex;
-  justify-content: flex-end;
-  position: sticky;
-  top: 88px;
+  justify-content: center;
 }
 
 .avatar {
-  width: min(360px, 82vw);
+  width: min(360px, 90%);
   aspect-ratio: 1 / 1;
   border-radius: 999px;
   object-fit: cover;
+  object-position: 50% 30%;
   border: 1px solid rgba(132, 204, 22, 0.35);
   box-shadow: 0 18px 40px rgba(17, 24, 39, 0.10);
   background: #fff;
@@ -331,7 +332,8 @@ a:hover { text-decoration: underline; text-decoration-color: rgba(132,204,22,0.5
   .grid-3 { grid-template-columns: 1fr; }
   .bg-math { display: none; }
   .about-grid { grid-template-columns: 1fr; }
-  .about-photo { position: static; justify-content: flex-start; order: -1; }
+  .about-stack { max-width: none; }
+  .about-photo { order: -1; justify-content: flex-start; }
   .avatar { width: min(260px, 70vw); }
 }
 
